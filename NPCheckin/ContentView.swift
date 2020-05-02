@@ -7,15 +7,28 @@
 //
 
 import SwiftUI
+import Combine
 
-struct ContentView: View {
-    var body: some View {
-        Text("Hello, World!")
-    }
+enum AppScreen {
+    case webview
+    case urlentryview
+    case codescanner
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct ContentView: View {
+    
+    @State private var currentViewState: AppScreen = URL(string: UserDefaults.standard.string(forKey: "checkin_address") ?? "") != nil ? AppScreen.webview : AppScreen.urlentryview
+    
+    var body: some View {
+        return Group {
+            if currentViewState == AppScreen.webview {
+                WebView(currentViewState: self.$currentViewState)
+            }
+            else {
+                UrlEntryView(currentAppScreen: self.$currentViewState)
+            }
+        }
+        .statusBar(hidden: true)
+        .edgesIgnoringSafeArea(.all)
     }
 }

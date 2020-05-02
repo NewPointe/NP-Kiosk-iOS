@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0722B5B12456FA89006299AA /* KioskWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722B5B02456FA89006299AA /* KioskWebView.swift */; };
+		0722B5B324570423006299AA /* UrlEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722B5B224570423006299AA /* UrlEntryView.swift */; };
+		0722B5B524574F1D006299AA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0722B5B424574F1D006299AA /* Settings.bundle */; };
+		0788102C2459B2B2005A8AEE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788102B2459B2B2005A8AEE /* Extensions.swift */; };
+		078810342459C716005A8AEE /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078810332459C716005A8AEE /* CodeScanner.swift */; };
+		078810392459D268005A8AEE /* KeyboardHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078810382459D268005A8AEE /* KeyboardHost.swift */; };
+		0788103B2459E2CB005A8AEE /* FullscreenWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788103A2459E2CB005A8AEE /* FullscreenWebView.swift */; };
+		0788103D2459E57A005A8AEE /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788103C2459E57A005A8AEE /* ProgressBar.swift */; };
+		0788103F245B410F005A8AEE /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788103E245B410F005A8AEE /* SettingsService.swift */; };
 		07B517CA2456EC830069117E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B517C92456EC830069117E /* AppDelegate.swift */; };
 		07B517CC2456EC830069117E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B517CB2456EC830069117E /* SceneDelegate.swift */; };
 		07B517CE2456EC830069117E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B517CD2456EC830069117E /* ContentView.swift */; };
@@ -35,6 +44,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0722B5B02456FA89006299AA /* KioskWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskWebView.swift; sourceTree = "<group>"; };
+		0722B5B224570423006299AA /* UrlEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlEntryView.swift; sourceTree = "<group>"; };
+		0722B5B424574F1D006299AA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		0788102B2459B2B2005A8AEE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		078810332459C716005A8AEE /* CodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
+		078810382459D268005A8AEE /* KeyboardHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHost.swift; sourceTree = "<group>"; };
+		0788103A2459E2CB005A8AEE /* FullscreenWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenWebView.swift; sourceTree = "<group>"; };
+		0788103C2459E57A005A8AEE /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		0788103E245B410F005A8AEE /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
 		07B517C62456EC830069117E /* NPCheckin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NPCheckin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B517C92456EC830069117E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07B517CB2456EC830069117E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +94,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		078810352459C723005A8AEE /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				078810332459C716005A8AEE /* CodeScanner.swift */,
+				078810382459D268005A8AEE /* KeyboardHost.swift */,
+				0788103C2459E57A005A8AEE /* ProgressBar.swift */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
 		07B517BD2456EC820069117E = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +127,20 @@
 		07B517C82456EC830069117E /* NPCheckin */ = {
 			isa = PBXGroup;
 			children = (
+				078810352459C723005A8AEE /* ThirdParty */,
 				07B517C92456EC830069117E /* AppDelegate.swift */,
 				07B517CB2456EC830069117E /* SceneDelegate.swift */,
 				07B517CD2456EC830069117E /* ContentView.swift */,
+				0722B5B02456FA89006299AA /* KioskWebView.swift */,
+				0788103A2459E2CB005A8AEE /* FullscreenWebView.swift */,
+				0722B5B224570423006299AA /* UrlEntryView.swift */,
+				0788102B2459B2B2005A8AEE /* Extensions.swift */,
 				07B517CF2456EC860069117E /* Assets.xcassets */,
 				07B517D42456EC860069117E /* LaunchScreen.storyboard */,
 				07B517D72456EC860069117E /* Info.plist */,
+				0788103E245B410F005A8AEE /* SettingsService.swift */,
 				07B517D12456EC860069117E /* Preview Content */,
+				0722B5B424574F1D006299AA /* Settings.bundle */,
 			);
 			path = NPCheckin;
 			sourceTree = "<group>";
@@ -152,6 +187,8 @@
 			dependencies = (
 			);
 			name = NPCheckin;
+			packageProductDependencies = (
+			);
 			productName = NPCheckin;
 			productReference = 07B517C62456EC830069117E /* NPCheckin.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +261,8 @@
 				Base,
 			);
 			mainGroup = 07B517BD2456EC820069117E;
+			packageReferences = (
+			);
 			productRefGroup = 07B517C72456EC830069117E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -240,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0722B5B524574F1D006299AA /* Settings.bundle in Resources */,
 				07B517D62456EC860069117E /* LaunchScreen.storyboard in Resources */,
 				07B517D32456EC860069117E /* Preview Assets.xcassets in Resources */,
 				07B517D02456EC860069117E /* Assets.xcassets in Resources */,
@@ -268,8 +308,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				07B517CA2456EC830069117E /* AppDelegate.swift in Sources */,
+				0788103D2459E57A005A8AEE /* ProgressBar.swift in Sources */,
+				0788102C2459B2B2005A8AEE /* Extensions.swift in Sources */,
+				0722B5B12456FA89006299AA /* KioskWebView.swift in Sources */,
+				0722B5B324570423006299AA /* UrlEntryView.swift in Sources */,
+				0788103F245B410F005A8AEE /* SettingsService.swift in Sources */,
+				078810392459D268005A8AEE /* KeyboardHost.swift in Sources */,
 				07B517CC2456EC830069117E /* SceneDelegate.swift in Sources */,
 				07B517CE2456EC830069117E /* ContentView.swift in Sources */,
+				0788103B2459E2CB005A8AEE /* FullscreenWebView.swift in Sources */,
+				078810342459C716005A8AEE /* CodeScanner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +487,7 @@
 				DEVELOPMENT_TEAM = NH5XJ7P58C;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = NPCheckin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +508,7 @@
 				DEVELOPMENT_TEAM = NH5XJ7P58C;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = NPCheckin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
