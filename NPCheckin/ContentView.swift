@@ -9,23 +9,20 @@
 import SwiftUI
 import Combine
 
-enum AppScreen {
-    case webview
-    case urlentryview
-    case codescanner
-}
 
 struct ContentView: View {
-    
-    @State private var currentViewState: AppScreen = URL(string: UserDefaults.standard.string(forKey: "checkin_address") ?? "") != nil ? AppScreen.webview : AppScreen.urlentryview
+    @EnvironmentObject var screenService: ScreenService
     
     var body: some View {
         return Group {
-            if currentViewState == AppScreen.webview {
-                WebView(currentViewState: self.$currentViewState)
+            if self.screenService.current == Screen.kiosk {
+                KioskScreen()
+            }
+            else if self.screenService.current == Screen.inAppSettings {
+                FirstTimeSetupScreen()
             }
             else {
-                UrlEntryView(currentAppScreen: self.$currentViewState)
+                FirstTimeSetupScreen()
             }
         }
         .statusBar(hidden: true)

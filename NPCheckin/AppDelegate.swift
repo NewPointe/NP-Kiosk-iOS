@@ -11,7 +11,19 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let settingsService: SettingsService
+    let webRTCService: WebRTCService
+    let labelPrintService: LabelPrintService
+    let labelCacheService: LabelCacheService
+    let cameraService: CameraService
+    
+    override init() {
+        self.settingsService = SettingsService()
+        self.webRTCService = WebRTCService()
+        self.labelCacheService = LabelCacheService(self.settingsService)
+        self.labelPrintService = LabelPrintService(self.settingsService, self.labelCacheService)
+        self.cameraService = CameraService()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

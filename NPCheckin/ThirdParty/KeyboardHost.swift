@@ -2,6 +2,11 @@
 //  KeyboardHost.swift
 //  https://stackoverflow.com/a/57235093
 //
+//  Created by Benjamin Kindle on 27/7/2019.
+//
+//  This work is licensed under the terms of CC BY-SA 4.0.
+//  See https://creativecommons.org/licenses/by-sa/4.0/
+//
 
 import SwiftUI
 

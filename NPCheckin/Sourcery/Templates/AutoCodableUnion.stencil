@@ -1,0 +1,39 @@
+//
+//  AutoCodableUnion.swift
+//  NPKiosk
+//
+//  Created by Tyler Schrock on 7/8/20.
+//  Copyright © 2020 NewPointe Community Church. All rights reserved.
+//
+
+import Foundation
+
+{% for enum in types.implementing.AutoCodableUnion|enum %}
+{% if enum.hasAssociatedValues %}
+extension {{ enum.name }}: Codable {
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        {% for case in enum.cases %}{% if case.hasAssociatedValue %}if let {{ case.name }} = try? container.decode({{ case.associatedValues.first.typeName }}.self) {
+            self = .{{ case.name }}({{ case.name }})
+        } else {% else %}if container.decodeNil() {
+            self = .{{ case.name }}
+        } else {% endif %}{% endfor %}{
+            throw DecodingError.dataCorrupted(
+                .init(codingPath: decoder.codingPath, debugDescription: "Invalid value")
+            )
+        }
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        switch self {
+            {% for case in enum.cases %}{% if case.hasAssociatedValue %}case let .{{ case.name }}({{ case.name }}):
+                try container.encode({{ case.name }})
+            {% else %}case .{{ case.name }}:
+                try container.encodeNil(){% endif %}{% endfor %}
+        }
+    }
+}
+
+{% endif %}
+{% endfor %}

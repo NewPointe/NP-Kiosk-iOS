@@ -6,8 +6,7 @@
 //  Copyright © 2019 Paul Hudson. All rights reserved.
 //
 //  This work is licensed under the terms of the MIT license.
-//  For a copy, see <https://opensource.org/licenses/MIT>.
-//
+//  See https://opensource.org/licenses/MIT
 
 import AVFoundation
 import SwiftUI
@@ -40,10 +39,6 @@ public struct CodeScannerView: UIViewControllerRepresentable {
 
                 // make sure we only trigger scans once per use
                 codeFound = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    self.codeFound = false
-                }
-
             }
         }
 
@@ -135,53 +130,35 @@ public struct CodeScannerView: UIViewControllerRepresentable {
         var captureSession: AVCaptureSession!
         var previewLayer: AVCaptureVideoPreviewLayer!
         var delegate: ScannerCoordinator?
-        var aspectRatio: CGFloat = 1
 
         override public func viewDidLoad() {
             super.viewDidLoad()
 
-            // Add an observer for orientation changes
-            NotificationCenter.default.addObserver(
-                self,
-                selector: #selector(updateOrientation),
-                name: Notification.Name("UIDeviceOrientationDidChangeNotification"),
-                object: nil
-            )
 
-            // Set the view background to black
+            NotificationCenter.default.addObserver(self,
+                                                   selector: #selector(updateOrientation),
+                                                   name: Notification.Name("UIDeviceOrientationDidChangeNotification"),
+                                                   object: nil)
+
             view.backgroundColor = UIColor.black
-            
-            // Start a capture session
             captureSession = AVCaptureSession()
 
-            // Get the front camera
-            guard let videoCaptureDevice = AVCaptureDevice.default(
-                .builtInWideAngleCamera,
-                for: .video,
-                position: .front
-            ) else { return }
-            
-            // Get a capture input
+            guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
             let videoInput: AVCaptureDeviceInput
+
             do {
                 videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
             } catch {
                 return
             }
 
-            // Add capture input
             if (captureSession.canAddInput(videoInput)) {
                 captureSession.addInput(videoInput)
             } else {
                 delegate?.didFail(reason: .badInput)
                 return
             }
-            
-            let formatDescription = videoCaptureDevice.activeFormat.formatDescription
-            let dimensions = CMVideoFormatDescriptionGetDimensions(formatDescription)
-            aspectRatio = CGFloat(dimensions.height) / CGFloat(dimensions.width);
 
-            // Add capture output
             let metadataOutput = AVCaptureMetadataOutput()
 
             if (captureSession.canAddOutput(metadataOutput)) {
@@ -196,47 +173,20 @@ public struct CodeScannerView: UIViewControllerRepresentable {
         }
 
         override public func viewWillLayoutSubviews() {
-            let portraitOrientation = (UIScreen.main.bounds.height > UIScreen.main.bounds.width)
-            let adjustedRatio = portraitOrientation ? 1 / aspectRatio : aspectRatio
-            if(previewLayer != nil) {
-                previewLayer.frame = CGRect(
-                    origin: CGPoint(
-                        x: previewLayer.frame.minX,
-                        y: previewLayer.frame.minY
-                    ),
-                    size: CGSize(
-                        width: view.layer.bounds.width,
-                        height: view.layer.bounds.width * adjustedRatio
-                    )
-                )
-            }
-            view.layer.bounds = CGRect(
-                origin: CGPoint(
-                    x: view.layer.bounds.minX,
-                    y: view.layer.bounds.minY
-                ),
-                size: CGSize(
-                    width: view.layer.bounds.width,
-                    height: view.layer.bounds.width * adjustedRatio
-                )
-            )
+            previewLayer?.frame = view.layer.bounds
         }
 
         @objc func updateOrientation() {
-            guard let orientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation else {
-                return
-            }
-            if(captureSession.connections.count > 1) {
-                let previewConnection = captureSession.connections[1]
-                previewConnection.videoOrientation = AVCaptureVideoOrientation(rawValue: orientation.rawValue) ?? .portrait
-            }
+            guard let orientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation else { return }
+            guard let connection = captureSession.connections.last, connection.isVideoOrientationSupported else { return }
+            connection.videoOrientation = AVCaptureVideoOrientation(rawValue: orientation.rawValue) ?? .portrait
         }
 
         override public func viewDidAppear(_ animated: Bool) {
             super.viewDidAppear(animated)
             previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-            viewWillLayoutSubviews()
-            previewLayer.videoGravity = .resizeAspect
+            previewLayer.frame = view.layer.bounds
+            previewLayer.videoGravity = .resizeAspectFill
             view.layer.addSublayer(previewLayer)
             updateOrientation()
             captureSession.startRunning()

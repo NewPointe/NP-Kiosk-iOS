@@ -1,0 +1,20 @@
+PODS:
+  - GoogleWebRTC (1.1.29400)
+  - SwiftSocket (2.0.2)
+
+DEPENDENCIES:
+  - GoogleWebRTC (~> 1.1)
+  - SwiftSocket
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - GoogleWebRTC
+    - SwiftSocket
+
+SPEC CHECKSUMS:
+  GoogleWebRTC: cfb83bc346435a17fe06bb05f04ad826b858a7fb
+  SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
+
+PODFILE CHECKSUM: 034d3f635527360c7f06c6e375e629130f765c6d
+
+COCOAPODS: 1.9.1

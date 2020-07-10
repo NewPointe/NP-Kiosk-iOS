@@ -10,6 +10,31 @@ import UIKit
 import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    
+    let settingsService: SettingsService
+    let webRTCService: WebRTCService
+    let labelPrintService: LabelPrintService
+    let labelCacheService: LabelCacheService
+    let cameraService: CameraService
+    let screenService: ScreenService
+    let kioskApiService: KioskApiService
+    
+    override init() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.settingsService = appDelegate.settingsService
+        self.webRTCService = appDelegate.webRTCService
+        self.labelPrintService = appDelegate.labelPrintService
+        self.labelCacheService = appDelegate.labelCacheService
+        self.cameraService = appDelegate.cameraService
+        self.screenService = ScreenService()
+        self.screenService.current = self.settingsService.kioskAddress == nil ? .firstTimeSetup : .kiosk
+        self.kioskApiService = KioskApiService(
+            screenService,
+            appDelegate.settingsService,
+            appDelegate.labelPrintService,
+            appDelegate.cameraService
+        )
+    }
 
     var window: UIWindow?
 
@@ -21,6 +46,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
+            .environmentObject(self.settingsService)
+            .environmentObject(self.webRTCService)
+            .environmentObject(self.labelPrintService)
+            .environmentObject(self.labelCacheService)
+            .environmentObject(self.cameraService)
+            .environmentObject(self.screenService)
+            .environmentObject(self.kioskApiService)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

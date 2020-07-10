@@ -3,19 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0722B5B12456FA89006299AA /* KioskWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722B5B02456FA89006299AA /* KioskWebView.swift */; };
-		0722B5B324570423006299AA /* UrlEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722B5B224570423006299AA /* UrlEntryView.swift */; };
+		070E1D6424AA307C0075AE2C /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E1D6324AA307C0075AE2C /* CameraService.swift */; };
+		070E1D6624AA31960075AE2C /* ZebraCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E1D6524AA31960075AE2C /* ZebraCard.swift */; };
+		071F283F24B4C218001C48D2 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071F283E24B4C218001C48D2 /* ErrorView.swift */; };
+		071F284124B4D06D001C48D2 /* WebViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071F284024B4D06C001C48D2 /* WebViewUI.swift */; };
+		071F284424B51D58001C48D2 /* MediaStreamConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071F284324B51D58001C48D2 /* MediaStreamConstraints.swift */; };
+		071F284924B640A8001C48D2 /* AutoCodableUnion.stencil in Sources */ = {isa = PBXBuildFile; fileRef = 071F284824B640A8001C48D2 /* AutoCodableUnion.stencil */; };
+		071F284D24B76213001C48D2 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071F284C24B76213001C48D2 /* Types.swift */; };
+		071F284F24B76632001C48D2 /* AutoCodableUnion.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071F284E24B76632001C48D2 /* AutoCodableUnion.generated.swift */; };
+		071F285624B78E81001C48D2 /* CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071F285524B78E81001C48D2 /* CustomStringConvertible.swift */; };
+		071F285824B78EE3001C48D2 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071F285724B78EE3001C48D2 /* Other.swift */; };
+		0722B5B12456FA89006299AA /* KioskScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722B5B02456FA89006299AA /* KioskScreen.swift */; };
+		0722B5B324570423006299AA /* FirstTimeSetupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722B5B224570423006299AA /* FirstTimeSetupScreen.swift */; };
 		0722B5B524574F1D006299AA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0722B5B424574F1D006299AA /* Settings.bundle */; };
-		0788102C2459B2B2005A8AEE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788102B2459B2B2005A8AEE /* Extensions.swift */; };
-		078810342459C716005A8AEE /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078810332459C716005A8AEE /* CodeScanner.swift */; };
+		07273FA9247821E700701F48 /* CodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07273FA8247821E700701F48 /* CodeScannerView.swift */; };
+		07273FAD247839B700701F48 /* WebRTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07273FAC247839B700701F48 /* WebRTC.swift */; };
+		07273FAF24A0F89000701F48 /* WebRTCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07273FAE24A0F89000701F48 /* WebRTCService.swift */; };
+		07273FB124A104DF00701F48 /* UserMediaSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07273FB024A104DF00701F48 /* UserMediaSession.swift */; };
+		07273FB324A1296D00701F48 /* ScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07273FB224A1296D00701F48 /* ScreenService.swift */; };
+		07273FB524A138CA00701F48 /* KioskApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07273FB424A138CA00701F48 /* KioskApiService.swift */; };
+		07273FB824A139AA00701F48 /* CheckinLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07273FB724A139AA00701F48 /* CheckinLabel.swift */; };
+		07273FBA24A13A4000701F48 /* LabelPrintService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07273FB924A13A4000701F48 /* LabelPrintService.swift */; };
+		07273FBC24A13A9900701F48 /* LabelCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07273FBB24A13A9900701F48 /* LabelCacheService.swift */; };
+		07273FC024A1422500701F48 /* PrintJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07273FBF24A1422500701F48 /* PrintJob.swift */; };
+		07273FC224A1429B00701F48 /* CachedLabelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07273FC124A1429B00701F48 /* CachedLabelData.swift */; };
+		07273FC624A296B800701F48 /* KioskWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07273FC524A296B800701F48 /* KioskWKWebView.swift */; };
 		078810392459D268005A8AEE /* KeyboardHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078810382459D268005A8AEE /* KeyboardHost.swift */; };
-		0788103B2459E2CB005A8AEE /* FullscreenWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788103A2459E2CB005A8AEE /* FullscreenWebView.swift */; };
 		0788103D2459E57A005A8AEE /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788103C2459E57A005A8AEE /* ProgressBar.swift */; };
-		0788103F245B410F005A8AEE /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788103E245B410F005A8AEE /* SettingsService.swift */; };
 		07B517CA2456EC830069117E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B517C92456EC830069117E /* AppDelegate.swift */; };
 		07B517CC2456EC830069117E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B517CB2456EC830069117E /* SceneDelegate.swift */; };
 		07B517CE2456EC830069117E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B517CD2456EC830069117E /* ContentView.swift */; };
@@ -24,6 +42,21 @@
 		07B517D62456EC860069117E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07B517D42456EC860069117E /* LaunchScreen.storyboard */; };
 		07B517E12456EC860069117E /* NPCheckinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B517E02456EC860069117E /* NPCheckinTests.swift */; };
 		07B517EC2456EC860069117E /* NPCheckinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B517EB2456EC860069117E /* NPCheckinUITests.swift */; };
+		07E2DD71246B0072007687E8 /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2DD70246B0072007687E8 /* SettingsService.swift */; };
+		07E2DD73246B007C007687E8 /* WebRTCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2DD72246B007C007687E8 /* WebRTCClient.swift */; };
+		07E2DD75246B03D0007687E8 /* GetUserMediaShim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2DD74246B03D0007687E8 /* GetUserMediaShim.swift */; };
+		07E2DD77246B046A007687E8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2DD76246B046A007687E8 /* Message.swift */; };
+		07E2DD7E246B434F007687E8 /* RpcClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2DD7D246B434F007687E8 /* RpcClient.swift */; };
+		07E2DD81246C8032007687E8 /* RpcIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2DD80246C8032007687E8 /* RpcIdentifier.swift */; };
+		07E2DD83246C808A007687E8 /* RpcParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2DD82246C808A007687E8 /* RpcParameters.swift */; };
+		07E2DD85246C81B1007687E8 /* JsonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2DD84246C81B1007687E8 /* JsonValue.swift */; };
+		07E2DD87246C82EA007687E8 /* RpcIncomingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2DD86246C82EA007687E8 /* RpcIncomingMessage.swift */; };
+		07E2DD89246C8320007687E8 /* RpcData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2DD88246C8320007687E8 /* RpcData.swift */; };
+		07E2DD8C246DB6EC007687E8 /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = 07E2DD8B246DB6EC007687E8 /* Promises */; };
+		07E2DD982476BED6007687E8 /* KioskApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2DD972476BED6007687E8 /* KioskApi.swift */; };
+		07E2DD9E2476FC06007687E8 /* RpcIncomingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2DD9D2476FC06007687E8 /* RpcIncomingRequest.swift */; };
+		07E2DDA1247701BB007687E8 /* GetUserMediaShim.js in Resources */ = {isa = PBXBuildFile; fileRef = 07E2DDA0247701BB007687E8 /* GetUserMediaShim.js */; };
+		694163F98303D76CD392EF60 /* libPods-NPCheckin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A743702EAF8C3CE7735268D /* libPods-NPCheckin.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,16 +77,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0722B5B02456FA89006299AA /* KioskWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskWebView.swift; sourceTree = "<group>"; };
-		0722B5B224570423006299AA /* UrlEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlEntryView.swift; sourceTree = "<group>"; };
+		070E1D6324AA307C0075AE2C /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		070E1D6524AA31960075AE2C /* ZebraCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZebraCard.swift; sourceTree = "<group>"; };
+		071F283E24B4C218001C48D2 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		071F284024B4D06C001C48D2 /* WebViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewUI.swift; sourceTree = "<group>"; };
+		071F284324B51D58001C48D2 /* MediaStreamConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaStreamConstraints.swift; sourceTree = "<group>"; };
+		071F284824B640A8001C48D2 /* AutoCodableUnion.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoCodableUnion.stencil; sourceTree = "<group>"; };
+		071F284C24B76213001C48D2 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		071F284E24B76632001C48D2 /* AutoCodableUnion.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCodableUnion.generated.swift; sourceTree = "<group>"; };
+		071F285524B78E81001C48D2 /* CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStringConvertible.swift; sourceTree = "<group>"; };
+		071F285724B78EE3001C48D2 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
+		0722B5B02456FA89006299AA /* KioskScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskScreen.swift; sourceTree = "<group>"; };
+		0722B5B224570423006299AA /* FirstTimeSetupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeSetupScreen.swift; sourceTree = "<group>"; };
 		0722B5B424574F1D006299AA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		0788102B2459B2B2005A8AEE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		078810332459C716005A8AEE /* CodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
+		07273FA8247821E700701F48 /* CodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScannerView.swift; sourceTree = "<group>"; };
+		07273FAC247839B700701F48 /* WebRTC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRTC.swift; sourceTree = "<group>"; };
+		07273FAE24A0F89000701F48 /* WebRTCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRTCService.swift; sourceTree = "<group>"; };
+		07273FB024A104DF00701F48 /* UserMediaSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMediaSession.swift; sourceTree = "<group>"; };
+		07273FB224A1296D00701F48 /* ScreenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenService.swift; sourceTree = "<group>"; };
+		07273FB424A138CA00701F48 /* KioskApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskApiService.swift; sourceTree = "<group>"; };
+		07273FB724A139AA00701F48 /* CheckinLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinLabel.swift; sourceTree = "<group>"; };
+		07273FB924A13A4000701F48 /* LabelPrintService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelPrintService.swift; sourceTree = "<group>"; };
+		07273FBB24A13A9900701F48 /* LabelCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCacheService.swift; sourceTree = "<group>"; };
+		07273FBF24A1422500701F48 /* PrintJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintJob.swift; sourceTree = "<group>"; };
+		07273FC124A1429B00701F48 /* CachedLabelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedLabelData.swift; sourceTree = "<group>"; };
+		07273FC524A296B800701F48 /* KioskWKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskWKWebView.swift; sourceTree = "<group>"; };
 		078810382459D268005A8AEE /* KeyboardHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHost.swift; sourceTree = "<group>"; };
-		0788103A2459E2CB005A8AEE /* FullscreenWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenWebView.swift; sourceTree = "<group>"; };
 		0788103C2459E57A005A8AEE /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
-		0788103E245B410F005A8AEE /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
-		07B517C62456EC830069117E /* NPCheckin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NPCheckin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07B517C62456EC830069117E /* NPKiosk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NPKiosk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B517C92456EC830069117E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07B517CB2456EC830069117E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		07B517CD2456EC830069117E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +118,22 @@
 		07B517E72456EC860069117E /* NPCheckinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NPCheckinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B517EB2456EC860069117E /* NPCheckinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPCheckinUITests.swift; sourceTree = "<group>"; };
 		07B517ED2456EC860069117E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07E2DD70246B0072007687E8 /* SettingsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
+		07E2DD72246B007C007687E8 /* WebRTCClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebRTCClient.swift; sourceTree = "<group>"; };
+		07E2DD74246B03D0007687E8 /* GetUserMediaShim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserMediaShim.swift; sourceTree = "<group>"; };
+		07E2DD76246B046A007687E8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		07E2DD7D246B434F007687E8 /* RpcClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RpcClient.swift; sourceTree = "<group>"; };
+		07E2DD80246C8032007687E8 /* RpcIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RpcIdentifier.swift; sourceTree = "<group>"; };
+		07E2DD82246C808A007687E8 /* RpcParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RpcParameters.swift; sourceTree = "<group>"; };
+		07E2DD84246C81B1007687E8 /* JsonValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonValue.swift; sourceTree = "<group>"; };
+		07E2DD86246C82EA007687E8 /* RpcIncomingMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RpcIncomingMessage.swift; sourceTree = "<group>"; };
+		07E2DD88246C8320007687E8 /* RpcData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RpcData.swift; sourceTree = "<group>"; };
+		07E2DD972476BED6007687E8 /* KioskApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskApi.swift; sourceTree = "<group>"; };
+		07E2DD9D2476FC06007687E8 /* RpcIncomingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RpcIncomingRequest.swift; sourceTree = "<group>"; };
+		07E2DDA0247701BB007687E8 /* GetUserMediaShim.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GetUserMediaShim.js; sourceTree = "<group>"; };
+		0A743702EAF8C3CE7735268D /* libPods-NPCheckin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NPCheckin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		563999121993D2703574D0A8 /* Pods-NPCheckin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPCheckin.release.xcconfig"; path = "Target Support Files/Pods-NPCheckin/Pods-NPCheckin.release.xcconfig"; sourceTree = "<group>"; };
+		6085D2C78F9628650846AED5 /* Pods-NPCheckin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPCheckin.debug.xcconfig"; path = "Target Support Files/Pods-NPCheckin/Pods-NPCheckin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +141,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E2DD8C246DB6EC007687E8 /* Promises in Frameworks */,
+				694163F98303D76CD392EF60 /* libPods-NPCheckin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,12 +163,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071F284524B63E9D001C48D2 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				071F284E24B76632001C48D2 /* AutoCodableUnion.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		071F284624B63EBA001C48D2 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				071F284824B640A8001C48D2 /* AutoCodableUnion.stencil */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		071F284724B63EF2001C48D2 /* Sourcery */ = {
+			isa = PBXGroup;
+			children = (
+				071F284C24B76213001C48D2 /* Types.swift */,
+				071F284624B63EBA001C48D2 /* Templates */,
+				071F284524B63E9D001C48D2 /* Generated */,
+			);
+			path = Sourcery;
+			sourceTree = "<group>";
+		};
+		071F285424B78E75001C48D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				071F285524B78E81001C48D2 /* CustomStringConvertible.swift */,
+				07273FAC247839B700701F48 /* WebRTC.swift */,
+				071F285724B78EE3001C48D2 /* Other.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		07273FB624A1398A00701F48 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				071F284324B51D58001C48D2 /* MediaStreamConstraints.swift */,
+				07273FC124A1429B00701F48 /* CachedLabelData.swift */,
+				07273FB724A139AA00701F48 /* CheckinLabel.swift */,
+				07273FBF24A1422500701F48 /* PrintJob.swift */,
+				070E1D6524AA31960075AE2C /* ZebraCard.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		07273FC324A2962E00701F48 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				0722B5B224570423006299AA /* FirstTimeSetupScreen.swift */,
+				0722B5B02456FA89006299AA /* KioskScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		07273FC424A296A100701F48 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0788103C2459E57A005A8AEE /* ProgressBar.swift */,
+				07273FC524A296B800701F48 /* KioskWKWebView.swift */,
+				07273FA8247821E700701F48 /* CodeScannerView.swift */,
+				071F283E24B4C218001C48D2 /* ErrorView.swift */,
+				071F284024B4D06C001C48D2 /* WebViewUI.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		078810352459C723005A8AEE /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				078810332459C716005A8AEE /* CodeScanner.swift */,
+				07E2DD78246B047B007687E8 /* WebRTC */,
 				078810382459D268005A8AEE /* KeyboardHost.swift */,
-				0788103C2459E57A005A8AEE /* ProgressBar.swift */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -111,13 +248,15 @@
 				07B517DF2456EC860069117E /* NPCheckinTests */,
 				07B517EA2456EC860069117E /* NPCheckinUITests */,
 				07B517C72456EC830069117E /* Products */,
+				7F23D2B17460BDDB44063BB3 /* Pods */,
+				2D31E3429084E5C60105B3EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		07B517C72456EC830069117E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07B517C62456EC830069117E /* NPCheckin.app */,
+				07B517C62456EC830069117E /* NPKiosk.app */,
 				07B517DC2456EC860069117E /* NPCheckinTests.xctest */,
 				07B517E72456EC860069117E /* NPCheckinUITests.xctest */,
 			);
@@ -127,18 +266,21 @@
 		07B517C82456EC830069117E /* NPCheckin */ = {
 			isa = PBXGroup;
 			children = (
+				071F285424B78E75001C48D2 /* Extensions */,
+				071F284724B63EF2001C48D2 /* Sourcery */,
+				07273FC424A296A100701F48 /* Views */,
+				07273FC324A2962E00701F48 /* Screens */,
+				07273FB624A1398A00701F48 /* Models */,
+				07E2DD9F247701BB007687E8 /* Resources */,
+				07E2DD8F2476B7DE007687E8 /* WebView */,
+				07E2DD6F246B003F007687E8 /* Services */,
 				078810352459C723005A8AEE /* ThirdParty */,
 				07B517C92456EC830069117E /* AppDelegate.swift */,
 				07B517CB2456EC830069117E /* SceneDelegate.swift */,
 				07B517CD2456EC830069117E /* ContentView.swift */,
-				0722B5B02456FA89006299AA /* KioskWebView.swift */,
-				0788103A2459E2CB005A8AEE /* FullscreenWebView.swift */,
-				0722B5B224570423006299AA /* UrlEntryView.swift */,
-				0788102B2459B2B2005A8AEE /* Extensions.swift */,
 				07B517CF2456EC860069117E /* Assets.xcassets */,
 				07B517D42456EC860069117E /* LaunchScreen.storyboard */,
 				07B517D72456EC860069117E /* Info.plist */,
-				0788103E245B410F005A8AEE /* SettingsService.swift */,
 				07B517D12456EC860069117E /* Preview Content */,
 				0722B5B424574F1D006299AA /* Settings.bundle */,
 			);
@@ -171,6 +313,103 @@
 			path = NPCheckinUITests;
 			sourceTree = "<group>";
 		};
+		07E2DD6F246B003F007687E8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				070E1D6324AA307C0075AE2C /* CameraService.swift */,
+				07273FB424A138CA00701F48 /* KioskApiService.swift */,
+				07273FBB24A13A9900701F48 /* LabelCacheService.swift */,
+				07273FB924A13A4000701F48 /* LabelPrintService.swift */,
+				07273FB224A1296D00701F48 /* ScreenService.swift */,
+				07E2DD70246B0072007687E8 /* SettingsService.swift */,
+				07273FAE24A0F89000701F48 /* WebRTCService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		07E2DD78246B047B007687E8 /* WebRTC */ = {
+			isa = PBXGroup;
+			children = (
+				07E2DD76246B046A007687E8 /* Message.swift */,
+				07E2DD72246B007C007687E8 /* WebRTCClient.swift */,
+			);
+			path = WebRTC;
+			sourceTree = "<group>";
+		};
+		07E2DD7F246C7FF8007687E8 /* RpcClient */ = {
+			isa = PBXGroup;
+			children = (
+				07E2DD7D246B434F007687E8 /* RpcClient.swift */,
+				07E2DD9C2476FBE1007687E8 /* Data */,
+				07E2DD84246C81B1007687E8 /* JsonValue.swift */,
+			);
+			path = RpcClient;
+			sourceTree = "<group>";
+		};
+		07E2DD8F2476B7DE007687E8 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				07E2DD962476BEAD007687E8 /* Plugins */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		07E2DD962476BEAD007687E8 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				07E2DD992476D1B8007687E8 /* GetUserMediaShim */,
+				07E2DD7F246C7FF8007687E8 /* RpcClient */,
+				07E2DD972476BED6007687E8 /* KioskApi.swift */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		07E2DD992476D1B8007687E8 /* GetUserMediaShim */ = {
+			isa = PBXGroup;
+			children = (
+				07E2DD74246B03D0007687E8 /* GetUserMediaShim.swift */,
+				07273FB024A104DF00701F48 /* UserMediaSession.swift */,
+			);
+			path = GetUserMediaShim;
+			sourceTree = "<group>";
+		};
+		07E2DD9C2476FBE1007687E8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				07E2DD80246C8032007687E8 /* RpcIdentifier.swift */,
+				07E2DD82246C808A007687E8 /* RpcParameters.swift */,
+				07E2DD88246C8320007687E8 /* RpcData.swift */,
+				07E2DD86246C82EA007687E8 /* RpcIncomingMessage.swift */,
+				07E2DD9D2476FC06007687E8 /* RpcIncomingRequest.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		07E2DD9F247701BB007687E8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07E2DDA0247701BB007687E8 /* GetUserMediaShim.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2D31E3429084E5C60105B3EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A743702EAF8C3CE7735268D /* libPods-NPCheckin.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F23D2B17460BDDB44063BB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6085D2C78F9628650846AED5 /* Pods-NPCheckin.debug.xcconfig */,
+				563999121993D2703574D0A8 /* Pods-NPCheckin.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,9 +417,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07B517F02456EC860069117E /* Build configuration list for PBXNativeTarget "NPCheckin" */;
 			buildPhases = (
+				30D201D331FF946EBC18EB63 /* [CP] Check Pods Manifest.lock */,
 				07B517C22456EC830069117E /* Sources */,
 				07B517C32456EC830069117E /* Frameworks */,
 				07B517C42456EC830069117E /* Resources */,
+				7B799E6181F5D629C6B737F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,9 +429,10 @@
 			);
 			name = NPCheckin;
 			packageProductDependencies = (
+				07E2DD8B246DB6EC007687E8 /* Promises */,
 			);
 			productName = NPCheckin;
-			productReference = 07B517C62456EC830069117E /* NPCheckin.app */;
+			productReference = 07B517C62456EC830069117E /* NPKiosk.app */;
 			productType = "com.apple.product-type.application";
 		};
 		07B517DB2456EC860069117E /* NPCheckinTests */ = {
@@ -262,6 +504,7 @@
 			);
 			mainGroup = 07B517BD2456EC820069117E;
 			packageReferences = (
+				07E2DD8A246DB6EC007687E8 /* XCRemoteSwiftPackageReference "promises" */,
 			);
 			productRefGroup = 07B517C72456EC830069117E /* Products */;
 			projectDirPath = "";
@@ -280,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0722B5B524574F1D006299AA /* Settings.bundle in Resources */,
+				07E2DDA1247701BB007687E8 /* GetUserMediaShim.js in Resources */,
 				07B517D62456EC860069117E /* LaunchScreen.storyboard in Resources */,
 				07B517D32456EC860069117E /* Preview Assets.xcassets in Resources */,
 				07B517D02456EC860069117E /* Assets.xcassets in Resources */,
@@ -302,22 +546,94 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		30D201D331FF946EBC18EB63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NPCheckin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B799E6181F5D629C6B737F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NPCheckin/Pods-NPCheckin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NPCheckin/Pods-NPCheckin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NPCheckin/Pods-NPCheckin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		07B517C22456EC830069117E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				071F284F24B76632001C48D2 /* AutoCodableUnion.generated.swift in Sources */,
+				07E2DD81246C8032007687E8 /* RpcIdentifier.swift in Sources */,
 				07B517CA2456EC830069117E /* AppDelegate.swift in Sources */,
+				070E1D6624AA31960075AE2C /* ZebraCard.swift in Sources */,
+				071F284D24B76213001C48D2 /* Types.swift in Sources */,
+				071F285624B78E81001C48D2 /* CustomStringConvertible.swift in Sources */,
 				0788103D2459E57A005A8AEE /* ProgressBar.swift in Sources */,
-				0788102C2459B2B2005A8AEE /* Extensions.swift in Sources */,
-				0722B5B12456FA89006299AA /* KioskWebView.swift in Sources */,
-				0722B5B324570423006299AA /* UrlEntryView.swift in Sources */,
-				0788103F245B410F005A8AEE /* SettingsService.swift in Sources */,
+				07E2DD89246C8320007687E8 /* RpcData.swift in Sources */,
+				071F284924B640A8001C48D2 /* AutoCodableUnion.stencil in Sources */,
+				07E2DD87246C82EA007687E8 /* RpcIncomingMessage.swift in Sources */,
+				07273FAD247839B700701F48 /* WebRTC.swift in Sources */,
+				071F285824B78EE3001C48D2 /* Other.swift in Sources */,
+				07273FC224A1429B00701F48 /* CachedLabelData.swift in Sources */,
+				0722B5B12456FA89006299AA /* KioskScreen.swift in Sources */,
+				07273FAF24A0F89000701F48 /* WebRTCService.swift in Sources */,
+				0722B5B324570423006299AA /* FirstTimeSetupScreen.swift in Sources */,
+				070E1D6424AA307C0075AE2C /* CameraService.swift in Sources */,
+				071F284124B4D06D001C48D2 /* WebViewUI.swift in Sources */,
+				07273FC024A1422500701F48 /* PrintJob.swift in Sources */,
 				078810392459D268005A8AEE /* KeyboardHost.swift in Sources */,
+				07E2DD7E246B434F007687E8 /* RpcClient.swift in Sources */,
+				07273FBC24A13A9900701F48 /* LabelCacheService.swift in Sources */,
+				071F284424B51D58001C48D2 /* MediaStreamConstraints.swift in Sources */,
+				07E2DD982476BED6007687E8 /* KioskApi.swift in Sources */,
+				07273FC624A296B800701F48 /* KioskWKWebView.swift in Sources */,
 				07B517CC2456EC830069117E /* SceneDelegate.swift in Sources */,
+				07E2DD71246B0072007687E8 /* SettingsService.swift in Sources */,
+				07E2DD75246B03D0007687E8 /* GetUserMediaShim.swift in Sources */,
 				07B517CE2456EC830069117E /* ContentView.swift in Sources */,
-				0788103B2459E2CB005A8AEE /* FullscreenWebView.swift in Sources */,
-				078810342459C716005A8AEE /* CodeScanner.swift in Sources */,
+				07E2DD85246C81B1007687E8 /* JsonValue.swift in Sources */,
+				07273FB124A104DF00701F48 /* UserMediaSession.swift in Sources */,
+				071F283F24B4C218001C48D2 /* ErrorView.swift in Sources */,
+				07273FA9247821E700701F48 /* CodeScannerView.swift in Sources */,
+				07E2DD9E2476FC06007687E8 /* RpcIncomingRequest.swift in Sources */,
+				07273FB324A1296D00701F48 /* ScreenService.swift in Sources */,
+				07273FB524A138CA00701F48 /* KioskApiService.swift in Sources */,
+				07273FB824A139AA00701F48 /* CheckinLabel.swift in Sources */,
+				07273FBA24A13A4000701F48 /* LabelPrintService.swift in Sources */,
+				07E2DD73246B007C007687E8 /* WebRTCClient.swift in Sources */,
+				07E2DD83246C808A007687E8 /* RpcParameters.swift in Sources */,
+				07E2DD77246B046A007687E8 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,11 +796,13 @@
 		};
 		07B517F12456EC860069117E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6085D2C78F9628650846AED5 /* Pods-NPCheckin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"NPCheckin/Preview Content\"";
 				DEVELOPMENT_TEAM = NH5XJ7P58C;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = NPCheckin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -492,8 +810,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.newpointe.NPCheckin;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.newpointe.kiosk;
+				PRODUCT_NAME = NPKiosk;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -501,11 +819,13 @@
 		};
 		07B517F22456EC860069117E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 563999121993D2703574D0A8 /* Pods-NPCheckin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"NPCheckin/Preview Content\"";
 				DEVELOPMENT_TEAM = NH5XJ7P58C;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = NPCheckin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -513,8 +833,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.newpointe.NPCheckin;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.newpointe.kiosk;
+				PRODUCT_NAME = NPKiosk;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -644,6 +964,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		07E2DD8A246DB6EC007687E8 /* XCRemoteSwiftPackageReference "promises" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/promises";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		07E2DD8B246DB6EC007687E8 /* Promises */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07E2DD8A246DB6EC007687E8 /* XCRemoteSwiftPackageReference "promises" */;
+			productName = Promises;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 07B517BE2456EC820069117E /* Project object */;
 }
