@@ -139,14 +139,14 @@ class RpcClient: NSObject, WKScriptMessageHandler {
                             }
                             .catch { error in
                                 if(request.id != nil) {
-                                    try? self.sendError(id: request.id!, error: RpcError(code: -32603, message: "Internal error"))
+                                    try? self.sendError(id: request.id!, error: error as? RpcError ?? RpcError(code: -32603, message: "Internal error"))
                                 }
                             }
                         }
                     }
                     catch {
                         if(request.id != nil) {
-                            try? self.sendError(id: request.id!, error: RpcError(code: -32603, message: "Internal error"))
+                            try? self.sendError(id: request.id!, error: error as? RpcError ?? RpcError(code: -32603, message: "Internal error"))
                         }
                     }
                 case let .result(result):
