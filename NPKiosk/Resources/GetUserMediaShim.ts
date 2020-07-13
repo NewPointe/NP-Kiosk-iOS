@@ -44,6 +44,11 @@ interface Window {
     }
 }
 
+interface StartSessionResponse { 
+    sessionId: string;
+    sessionDescription: RTCSessionDescriptionInit;
+}
+
 type Writeable<T> = { -readonly [P in keyof T]: T[P] };
 
 
@@ -169,7 +174,7 @@ type Writeable<T> = { -readonly [P in keyof T]: T[P] };
         const deferred = new Deferred<MediaStream>()
 
         // Connect to native
-        const [mediaSessionId, remoteDescription] = await rpcClient.sendRequest<[string, RTCSessionDescriptionInit]>("connect");
+        const { sessionId: mediaSessionId, sessionDescription: remoteDescription} = await rpcClient.sendRequest<StartSessionResponse>("GetUserMediaShim.native.connect", [generateGuid(), constraints as JsonObject]);
         
         // Start a new WebRTC connection
         const peerConnection = new RTCPeerConnection({ iceServers: [] });
@@ -184,12 +189,12 @@ type Writeable<T> = { -readonly [P in keyof T]: T[P] };
         // Forward candidates to native
         peerConnection.onicecandidate = (event: RTCPeerConnectionIceEvent) => {
             if (event.candidate) {
-                rpcClient.sendNotification("candidate", [mediaSessionId, event.candidate as unknown as JsonObject]);
+                rpcClient.sendNotification("GetUserMediaShim.native.candidate", [mediaSessionId, event.candidate as unknown as JsonObject]);
             }
         }
 
         // Listen for candidates
-        rpcClient.on("candidate", ([candidateMediaSessionId, candidate]: [string, RTCIceCandidateInit]) => {
+        rpcClient.on("GetUserMediaShim.javascript.candidate", ([candidateMediaSessionId, candidate]: [string, RTCIceCandidateInit]) => {
             if (candidateMediaSessionId == mediaSessionId) {
                 peerConnection.addIceCandidate(new RTCIceCandidate(candidate));
             }
@@ -205,7 +210,7 @@ type Writeable<T> = { -readonly [P in keyof T]: T[P] };
         await peerConnection.setLocalDescription(localDescription);
 
         // Send the local description to the native side
-        rpcClient.sendNotification("answer", [mediaSessionId, localDescription as JsonObject]);
+        rpcClient.sendNotification("GetUserMediaShim.native.answer", [mediaSessionId, localDescription as JsonObject]);
 
         // Return the promise
         return deferred.promise;

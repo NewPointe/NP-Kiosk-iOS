@@ -14,7 +14,7 @@ import os.log
 
 struct StartSessionResponse: Codable {
     let sessionId: String
-    let rtcSessionDescription: SessionDescription
+    let sessionDescription: SessionDescription
 }
 
 
@@ -41,7 +41,7 @@ final class GetUserMediaShim: NSObject, UserMediaSessionDelegate {
         super.init()
         
         // Register the RPC handlers
-        rpcClient.registerMethod("GetUserMediaShim.native.connectCamera", self.rpcConnectCamera)
+        rpcClient.registerMethod("GetUserMediaShim.native.connect", self.rpcConnect)
         rpcClient.registerMethod("GetUserMediaShim.native.answer", self.rpcAnswer)
         rpcClient.registerMethod("GetUserMediaShim.native.candidate", self.rpcCandidate)
         
@@ -66,13 +66,16 @@ final class GetUserMediaShim: NSObject, UserMediaSessionDelegate {
         }
     }
     
-    private func rpcConnect(mediaSessionId: String, constraints: MediaStreamConstraints) -> Promise<SessionDescription> {
+    private func rpcConnect(mediaSessionId: String, constraints: MediaStreamConstraints) -> Promise<StartSessionResponse> {
         os_log("Recieved request to start camera", type: .debug)
         return Promise { resolve, reject in
             let mediaSession = self.getOrCreateMediaSession(mediaSessionId: mediaSessionId)
             mediaSession.createOffer().then { offer in
                 mediaSession.setLocalDescription(localSdp: offer).then {
-                    resolve(SessionDescription(offer))
+                    resolve(StartSessionResponse(
+                        sessionId: mediaSessionId,
+                        sessionDescription: SessionDescription(offer)
+                    ))
                 }
             }
         }
@@ -83,6 +86,7 @@ final class GetUserMediaShim: NSObject, UserMediaSessionDelegate {
         if let mediaSession = self.mediaSessions[mediaSessionId] {
             _ = mediaSession.setRemoteDescription(remoteSdp: answer.value)
         }
+        return nil
     }
     
     private func rpcCandidate(mediaSessionId: String, candidate: IceCandidate) -> Promise<Bool>? {
