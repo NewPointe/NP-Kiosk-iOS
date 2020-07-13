@@ -66,16 +66,16 @@ final class GetUserMediaShim: NSObject, UserMediaSessionDelegate {
         }
     }
     
-    private func rpcConnectCamera(mediaSessionId: String, constraints: String) -> Promise<SessionDescription> {
+    private func rpcConnect(mediaSessionId: String, constraints: MediaStreamConstraints) -> Promise<SessionDescription> {
         os_log("Recieved request to start camera", type: .debug)
-        let promise = Promise<SessionDescription>.pending()
-        let mediaSession = self.getOrCreateMediaSession(mediaSessionId: mediaSessionId)
-        mediaSession.createOffer().then { offer in
-            mediaSession.setLocalDescription(localSdp: offer).then {
-                promise.fulfill(SessionDescription(offer))
+        return Promise { resolve, reject in
+            let mediaSession = self.getOrCreateMediaSession(mediaSessionId: mediaSessionId)
+            mediaSession.createOffer().then { offer in
+                mediaSession.setLocalDescription(localSdp: offer).then {
+                    resolve(SessionDescription(offer))
+                }
             }
         }
-        return promise
     }
     
     private func rpcAnswer(mediaSessionId: String, answer: SessionDescription) -> Promise<Bool>? {
@@ -83,7 +83,6 @@ final class GetUserMediaShim: NSObject, UserMediaSessionDelegate {
         if let mediaSession = self.mediaSessions[mediaSessionId] {
             _ = mediaSession.setRemoteDescription(remoteSdp: answer.value)
         }
-        return nil
     }
     
     private func rpcCandidate(mediaSessionId: String, candidate: IceCandidate) -> Promise<Bool>? {

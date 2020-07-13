@@ -1,0 +1,22 @@
+{
+  "name": "npkiosk-ios",
+  "version": "1.0.0",
+  "description": "NP-Kiosk for iOS ================",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NewPointe/NP-Kiosk-iOS.git"
+  },
+  "author": "Tyler Schrock <tschrock123@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NewPointe/NP-Kiosk-iOS/issues"
+  },
+  "homepage": "https://github.com/NewPointe/NP-Kiosk-iOS#readme",
+  "devDependencies": {
+    "typescript": "^3.9.6"
+  }
+}
